@@ -31,8 +31,8 @@ function App() {
             {/* <List items={fruits} category="Fruits"></List> */}
             {/* <ClassExample name="Prem"></ClassExample> */}
             {/* <ApiCall2></ApiCall2> */}
-            {/* <Mounting count={0}></Mounting> */}
-            <MyClassComponent count={2}></MyClassComponent>
+            <Mounting count={0}></Mounting>
+            {/* <MyClassComponent count={2}></MyClassComponent> */}
         </>
     );
 }

@@ -53,6 +53,10 @@ export default class Mounting extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log("component did mount called")
+    }
+
     increment() {
         console.log("called increment");
         this.setState((prevState) => ({
@@ -68,21 +72,6 @@ export default class Mounting extends Component {
                 <p>Count: {this.state.count}</p>
                 <button onClick={this.increment}>Increase</button>
                 <p>Age: {this.state.age}</p>
-
-                <div
-                    ref={this.containerRef}
-                    style={{
-                        height: "100px",
-                        overflowY: "scroll",
-                        border: "1px solid black",
-                        marginTop: "10px",
-                    }}
-                >
-                    {/* Make content tall enough to scroll */}
-                    {[...Array(50)].map((_, i) => (
-                        <div key={i}>Line {i + 1}</div>
-                    ))}
-                </div>
             </div>
         );
     }
