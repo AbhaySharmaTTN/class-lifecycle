@@ -64,6 +64,7 @@ export default class Mounting extends Component {
         console.log(prevState)  // old state
         console.log(this.state) // updated state, more like returned value from getDerivedStateFromProps
         console.log("snapshot", snapshot)
+        // without if statement it's like useEffect(() => { ... })
         if (prevState.count !== this.state.count) {
             console.log("Count updated");
             document.title = `Count: ${snapshot.count} ${this.state.count}`;
